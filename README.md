@@ -16,11 +16,14 @@ privacy.html      Privacy policy — the app stores link here too
 404.html          Not-found page (GitHub Pages serves this automatically)
 robots.txt        Crawler rules
 sitemap.xml       Search engine sitemap
-favicon.svg       Site icon
+favicon.png       Site icon, 180×180 (also the Apple touch icon)
 CNAME             Custom domain binding for GitHub Pages
 assets/
-  styles.css      All styling, shared by every page
-  og-image.png    Social share card (1200×630)
+  styles.css        All styling, shared by every page
+  og-image.png      Social share card (1200×630)
+  logo-mark-web.png Header logo, 146×120 — the file the site actually loads
+  logo-mark.png     Original full-resolution mark (source, not served)
+  logo-full.png     Original full lockup with wordmark (source, not served)
 ```
 
 ## Editing
@@ -29,8 +32,26 @@ The header and footer are copied into each page by hand. If you change one,
 change it in all five — there's no templating.
 
 Colors, spacing, and type live in the `:root` block at the top of
-`assets/styles.css`, with dark-mode overrides right below it. Changing an
-accent color there updates every page.
+`assets/styles.css`. Changing an accent color there updates every page.
+
+### The site is dark only
+
+There is no light theme. The logo is a cyan glow drawn for a black
+background, so the palette commits to dark rather than carrying a washed-out
+light variant. `:root` sets `color-scheme: dark` and there are no
+`prefers-color-scheme` blocks.
+
+If you ever add a light theme, note that `--accent` is bright cyan: white
+text on it fails contrast, which is why buttons use `--on-accent` (near
+black) for their label.
+
+### Logo assets
+
+`logo-mark.png` and `logo-full.png` are the originals as supplied, kept as
+the source of truth. They're around 700 KB and 1 MB, far too heavy to serve
+on every page, so the site loads the downscaled `logo-mark-web.png` (~16 KB)
+instead. If you replace the logo, regenerate the served copies rather than
+pointing the pages at the originals.
 
 ### Adding a released game
 
@@ -56,7 +77,15 @@ Then open <http://localhost:8000>. Use a server rather than opening the files
 directly — the pages use root-relative paths (`/assets/styles.css`), which
 don't resolve over `file://`.
 
-## Regenerating the social card
+## Regenerating images
 
-`assets/og-image.png` was rendered from HTML with headless Chromium at
-1200×630. To change it, rebuild the source HTML and re-screenshot at that size.
+`assets/og-image.png`, `assets/logo-mark-web.png`, and `favicon.png` were all
+rendered from HTML with headless Chromium and then cropped to size.
+
+Two gotchas if you redo this with the same approach:
+
+- Headless Chromium clamps its viewport to a 500px minimum width and loses
+  about 87px of height to chrome, so `--window-size` is not the size you get.
+  Render taller than you need and crop the padding off.
+- Pass `--virtual-time-budget` so the screenshot waits for images to decode;
+  without it you can capture a half-laid-out page.

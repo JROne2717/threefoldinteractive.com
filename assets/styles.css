@@ -1,39 +1,27 @@
 /* Threefold Interactive LLC — shared styles */
 
+/* Dark only. The logo is a cyan glow built for black, so the site commits to
+   one palette rather than carrying a washed-out light variant. Accent is
+   pulled from the logo's cyan. */
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
-  --accent: #6b5bf0;
-  --accent-soft: #8a7cf5;
-  --warm: #f0a13c;
+  --accent: #3ad4f0;
+  --accent-soft: #7ce7fb;
+  --on-accent: #04222b;
+  --warm: #f5b45f;
 
-  --bg: #ffffff;
-  --bg-alt: #f5f5f8;
-  --surface: #ffffff;
-  --border: #e2e2ea;
-  --text: #14151c;
-  --text-muted: #5c6070;
-  --shadow: 0 1px 2px rgb(20 21 28 / 6%), 0 8px 24px rgb(20 21 28 / 6%);
+  --bg: #07080c;
+  --bg-alt: #0d0f15;
+  --surface: #12141b;
+  --border: #23262f;
+  --text: #e9eaf0;
+  --text-muted: #9599a8;
+  --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 8px 24px rgb(0 0 0 / 30%);
 
   --measure: 68ch;
   --page: 1080px;
   --radius: 14px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent: #8c7dff;
-    --accent-soft: #a99dff;
-    --warm: #f5b45f;
-
-    --bg: #0c0d12;
-    --bg-alt: #12131a;
-    --surface: #16171f;
-    --border: #262835;
-    --text: #e9eaf0;
-    --text-muted: #9599a8;
-    --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 8px 24px rgb(0 0 0 / 30%);
-  }
 }
 
 *,
@@ -130,7 +118,7 @@ section + section { border-top: 1px solid var(--border); }
   left: -9999px;
   top: 0;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   padding: 10px 16px;
   z-index: 10;
   border-radius: 0 0 8px 0;
@@ -168,7 +156,7 @@ section + section { border-top: 1px solid var(--border); }
   text-decoration: none;
 }
 .brand:hover { color: var(--text); }
-.brand svg { flex: none; }
+.brand img { flex: none; display: block; }
 
 .nav {
   display: flex;
@@ -257,13 +245,14 @@ section + section { border-top: 1px solid var(--border); }
 }
 .btn:active { transform: translateY(1px); }
 
+/* Dark ink on the bright cyan — white text on this accent fails contrast. */
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
 .btn-primary:hover {
   background: var(--accent-soft);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .btn-ghost {
