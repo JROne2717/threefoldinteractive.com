@@ -13,6 +13,7 @@ index.html        Home
 games.html        Games (currently: first title in development)
 support.html      Support, refunds, data deletion — the app stores link here
 privacy.html      Privacy policy — the app stores link here too
+terms.html        Terms of service / EULA
 404.html          Not-found page (GitHub Pages serves this automatically)
 robots.txt        Crawler rules
 sitemap.xml       Search engine sitemap
@@ -29,7 +30,7 @@ assets/
 ## Editing
 
 The header and footer are copied into each page by hand. If you change one,
-change it in all five — there's no templating.
+change it in all six — there's no templating.
 
 Colors, spacing, and type live in the `:root` block at the top of
 `assets/styles.css`. Changing an accent color there updates every page.
