@@ -27,26 +27,33 @@
   ═══════════════════════════════════════════════════════════════════════════
   MAINTAINER NOTE — READ BEFORE SHIPPING A GAME
 
-  This policy is written to be accurate for the studio's CURRENT state:
-  no released games, so the only data actually collected is what people send
-  by email. It is NOT accurate once a game ships.
+  This policy now describes what Broken Divide collects. Three things are
+  still UNCONFIRMED and were written from assumptions — fix them before
+  launch:
 
-  Before your first release, update:
+  1. NAME THE PROVIDERS. The analytics and crash-reporting sections describe
+     these services generically because the actual vendors are unknown.
+     GDPR expects processors to be named. Replace the generic wording with
+     the real ones (e.g. Unity Analytics, GameAnalytics, Sentry, Backtrace)
+     and link each one's privacy policy.
 
-  1. "Information we collect" — add anything the game collects: device IDs,
-     crash logs, gameplay/progress data, purchase records, account details.
-  2. "Third-party services" — list every SDK you actually embed (analytics,
-     crash reporting, ads, auth, cloud save) and link each one's privacy
-     policy. This list is currently empty on purpose.
-  3. "Children" — if you target or knowingly allow under-13 players, COPPA
-     applies and this section needs to be rewritten, not tweaked.
-  4. "Last updated" date below.
-  5. Confirm this matches the Data Safety form on Google Play and the App
-     Privacy answers on the App Store. A mismatch is the single most common
-     reason store listings get rejected or pulled.
+  2. WHERE RIFT AND RAID DATA LIVES. This assumes rift scores and raid
+     damage go to servers Threefold operates. If they use Steam Leaderboards
+     instead, Valve is the processor and those paragraphs should say so.
 
-  This is a starting template, not legal advice. Have a lawyer review it
-  before you rely on it for a commercial release.
+  3. WHERE CLOUD SAVES LIVE. This assumes Steam Cloud. If saves go to your
+     own backend, say that instead — it changes who holds the data.
+
+  Also before launch:
+  - Update the "Last updated" date.
+  - Make this match the privacy disclosures on the Steam store page.
+  - Work out how a deletion request interacts with leaderboards. Removing
+     someone's entries is a real operational job, and the support page
+     promises 30 days.
+
+  This is a starting template, not legal advice. Public leaderboards plus a
+  backend holding player data plus EU players is genuinely the point where a
+  lawyer is worth the money.
   ═══════════════════════════════════════════════════════════════════════════
 -->
 <body>
@@ -70,7 +77,7 @@
     <section>
       <div class="wrap legal">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: July 30, 2026</p>
+        <p class="updated">Last updated: August 8, 2026</p>
 
         <p>
           This policy explains what information Threefold Interactive LLC
@@ -81,8 +88,10 @@
 
         <h2>The short version</h2>
         <p>
-          We don't sell your personal information. We collect as little as we
-          can get away with, and we tell you what that is below.
+          We don't sell your personal information and we don't run ads. Broken
+          Divide collects what it needs to save your progress, run leaderboards
+          and raids, and fix crashes — all of it listed below. Leaderboard
+          scores are public; nothing else you send us is.
         </p>
 
         <h2>Information we collect</h2>
@@ -99,31 +108,87 @@
         <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's Privacy Statement</a>
         for how they handle it.</p>
 
-        <p><strong>Information collected by our games.</strong> We currently
-        have no released games. When we release one, we will update this policy
-        before launch to describe exactly what that game collects, and the
-        game's store listing will carry the matching disclosures.</p>
+        <p><strong>Information collected by Broken Divide.</strong> When you
+        play the game, it collects:</p>
+        <ul>
+          <li><strong>Your Steam account identifier.</strong> Steam gives the
+          game a numeric ID for your account. We use it to tie your saves,
+          achievements, and leaderboard entries to you.</li>
+          <li><strong>Save and progress data</strong>, so your progress follows
+          you between machines.</li>
+          <li><strong>Achievement progress</strong>, recorded through Steam.</li>
+          <li><strong>Rift results</strong> — how far you got and the score it
+          earned, uploaded so it can be placed on a leaderboard.</li>
+          <li><strong>Raid damage totals</strong> — the damage you deal in an
+          asynchronous raid, uploaded and counted against that boss's health so
+          your contribution adds to the shared result.</li>
+          <li><strong>Crash reports</strong>, which include what the game was
+          doing when it failed, plus technical details about your machine such
+          as operating system version and hardware specification.</li>
+          <li><strong>Gameplay analytics</strong> — things like session length,
+          how far players get, and which features get used — so we can find
+          where the game is confusing, too hard, or broken.</li>
+        </ul>
+        <p>
+          Broken Divide never asks for your name, address, or payment details.
+          Your purchase is handled entirely by Steam and we never see your
+          payment information.
+        </p>
+
+        <h2>What other players can see</h2>
+        <p>
+          Leaderboards are public. That is the point of them — but it means the
+          score you post and the Steam persona name attached to your account can
+          be seen by other players. Your contribution to an asynchronous raid
+          works the same way.
+        </p>
+        <p>
+          Nothing else you send us is public. Your saves, crash reports, and
+          analytics are never shown to other players. If you would rather not
+          appear on a leaderboard at all, you can change the persona name Steam
+          displays at any time in your Steam profile settings.
+        </p>
 
         <h2>Third-party services</h2>
         <p>
-          We do not currently embed third-party analytics, advertising, or
-          attribution services. If that changes, we will list each service here
-          along with a link to its own privacy policy before the change takes
-          effect.
+          <strong>Valve Corporation (Steam).</strong> Broken Divide is
+          distributed through Steam and uses Steam's platform features for
+          sign-in, achievements, and cloud saves. What Valve does with your
+          information is covered by
+          <a href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noopener noreferrer">Valve's Privacy Policy</a>.
+        </p>
+        <p>
+          <strong>Crash reporting and analytics.</strong> We use third-party
+          services to collect crash reports and gameplay analytics. They process
+          that information on our behalf, under contract, and are not permitted
+          to use it for their own purposes or to sell it.
         </p>
 
         <h2>How we use information</h2>
         <ul>
+          <li>To save your progress and sync it between your machines</li>
+          <li>To run leaderboards, rift rankings, and asynchronous raids</li>
+          <li>To record achievements</li>
+          <li>To diagnose crashes and fix bugs</li>
+          <li>To understand how the game is played so we can balance and improve it</li>
           <li>To respond to questions, support requests, and business inquiries</li>
-          <li>To fix bugs and improve our games</li>
           <li>To meet legal, tax, and accounting obligations</li>
         </ul>
         <p>
-          We do not sell or rent personal information, and we do not share it
-          with third parties for their own marketing.
+          We do not sell or rent personal information, we do not share it with
+          third parties for their own marketing, and we do not use it to build
+          advertising profiles.
         </p>
 
         <h2>How long we keep it</h2>
+        <p>
+          Saves and progress data are kept while your copy of the game is active,
+          so you don't lose your game. Leaderboard and raid entries are kept for
+          as long as that leaderboard or raid event is running. Crash reports and
+          analytics are kept only as long as they're useful for fixing and
+          balancing the game, and are then deleted or aggregated so they no
+          longer identify anyone.
+        </p>
         <p>
           We keep correspondence for as long as it's useful for support and
           business records, and then delete it. Where the law requires us to
@@ -147,6 +212,11 @@
           We'll respond within 30 days. See our
           <a href="/support.html#data-deletion">data deletion instructions</a>
           for the fastest route to a deletion request.
+        </p>
+        <p>
+          One thing worth knowing about deletion: removing your data also removes
+          your leaderboard and raid entries, and we can't put them back. If you
+          ask us to delete and later play again, you start from nothing.
         </p>
 
         <h2>Children</h2>
