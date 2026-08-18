@@ -10,7 +10,7 @@ file, commit, and it's live.
 
 ```
 index.html        Home
-games.html        Games (currently: first title in development)
+games.html        Games (Broken Divide, released)
 support.html      Support, refunds, data deletion — the app stores link here
 privacy.html      Privacy policy — the app stores link here too
 terms.html        Terms of service / EULA
@@ -58,15 +58,14 @@ pointing the pages at the originals.
 
 `games.html` has a commented-out card template near the top of the games
 section. Copy it, fill in the title, description, and store links, and remove
-the "in development" status card.
+the status card.
 
-### Before shipping a game
+### Legal pages
 
-`privacy.html` opens with a maintainer comment listing what has to be updated
-before a first release — the collected-data section, the third-party SDK list,
-and the children's-privacy section. The policy as written is accurate only
-while no games are published. It also needs to match the Data Safety form on
-Google Play and the App Privacy answers on the App Store.
+`privacy.html` and `terms.html` each open with a maintainer comment listing
+what is still assumed rather than confirmed. Broken Divide has shipped, so
+both documents are live and in force — those comments are open items, not
+future work. Neither has been reviewed by a lawyer.
 
 ## Local preview
 

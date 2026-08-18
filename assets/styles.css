@@ -334,6 +334,12 @@ section + section { border-top: 1px solid var(--border); }
   background: currentColor;
 }
 
+/* Released, as opposed to the amber in-development state. */
+.tag-live {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
 /* ---------- contact list ---------- */
 
 .contact-list {
