@@ -27,29 +27,36 @@
   ═══════════════════════════════════════════════════════════════════════════
   MAINTAINER NOTE
 
-  Broken Divide is released, so this policy is operative. It has been
-  corrected to describe what the game ACTUALLY does today, confirmed by the
-  studio:
+  MAINTAINER NOTE
 
-  - No analytics.
-  - No crash reporting.
-  - Rift leaderboards and asynchronous raids are NOT live.
-  - Cloud saves are Steam Cloud, so Valve holds the save data, not us.
+  Current state, confirmed by the studio:
 
-  An earlier draft described all of those as active. Over-disclosing is
-  its own problem: it contradicts the Steam store page's data declaration
-  and tells players you take more than you do.
+  - No analytics, no crash reporting.
+  - Cloud saves are Steam Cloud, so Valve holds them.
+  - Rift leaderboards ship SHORTLY: score to a Steam leaderboard, plus a
+    run-record .txt to Steam Cloud and to a private Discord channel via
+    webhook.
+  - Asynchronous raids are still NOT live.
+
+  ON THE DAY RIFTS GO LIVE: delete the marked paragraph in "Information we
+  collect" that says leaderboards are launching shortly. Everything else
+  already describes rifts as active.
+
+  TWO THINGS TO CONFIRM, because this page states them as fact:
+
+  1. WHAT IS IN THE .txt. This says it holds the run — score, party, how it
+     played out. If it also carries the SteamID or persona name, that is
+     personal data going to Discord and the wording should say so plainly.
+  2. THE DISCORD CHANNEL IS PRIVATE. This says only the studio can read it.
+     If run records land anywhere players can see, that is a public
+     disclosure and must be described as one.
 
   UPDATE THIS PAGE BEFORE, NOT AFTER, any of the following ship:
-
-  1. Rift leaderboards or asynchronous raids. Both upload gameplay data and
-     make some of it public. The "Features that aren't live yet" section
-     becomes a real collection section, and "What other players can see"
-     needs to come back.
-  2. Any analytics or crash-reporting SDK. Name the vendor in "Third-party
-     services" and link its privacy policy — GDPR expects processors named.
-  3. Anything stored on a backend Threefold runs rather than on Steam. That
-     changes who holds player data and brings deletion obligations with it.
+  - Asynchronous raids.
+  - Any analytics or crash-reporting SDK — name the vendor under
+    "Third-party services"; GDPR expects processors named.
+  - Anything stored on a backend Threefold runs rather than on Steam or
+    Discord. That changes who holds player data and what deletion means.
 
   Also: keep this consistent with the Steam store page's privacy
   disclosures, and update the "Last updated" date whenever the text changes.
@@ -112,9 +119,8 @@
         <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's Privacy Statement</a>
         for how they handle it.</p>
 
-        <p><strong>Information collected by Broken Divide.</strong> Less than
-        you might expect. The game leans on Steam's platform features rather
-        than systems of our own:</p>
+        <p><strong>Information collected by Broken Divide.</strong> The game
+        leans on Steam's platform features rather than systems of our own:</p>
         <ul>
           <li><strong>Saved games</strong> are stored through Steam Cloud so
           your progress follows you between machines. Valve holds those files —
@@ -122,25 +128,44 @@
           <li><strong>Achievements</strong> are recorded through Steam. We can
           see how many players have unlocked each one, which tells us nothing
           about you individually.</li>
+          <li><strong>Rift scores</strong> are posted to a Steam leaderboard.
+          Leaderboards are public — see below.</li>
+          <li><strong>A record of your rift run</strong> is written to a text
+          file, saved to Steam Cloud, and sent to a private channel on our
+          Discord server so we can check that high scores are legitimate. It
+          describes the run itself — your score, your party, and how the run
+          played out.</li>
         </ul>
+        <!-- DELETE THE NEXT PARAGRAPH ON THE DAY RIFT LEADERBOARDS GO LIVE. -->
+        <p>
+          Rift leaderboards are launching shortly. Until they do, no rift scores
+          or run records are being collected.
+        </p>
         <p>
           Broken Divide does not run analytics, does not send us crash reports,
-          and does not upload your gameplay to us. It never asks for your name,
-          address, or payment details — your purchase is handled entirely by
-          Steam, and we never see your payment information.
+          and does not track how you play outside of a rift run. It never asks
+          for your name, address, or payment details — your purchase is handled
+          entirely by Steam, and we never see your payment information.
+        </p>
+
+        <h2>What other players can see</h2>
+        <p>
+          Rift leaderboards are public. That's the point of them — but it means
+          your score, and the Steam persona name attached to your account, can be
+          seen by other players. You can change the name Steam displays at any
+          time in your Steam profile settings, and you don't have to submit a
+          rift run at all.
+        </p>
+        <p>
+          The run records sent to Discord go to a private channel that only we
+          can read. They are not posted publicly.
         </p>
 
         <h2>Features that aren't live yet</h2>
         <p>
-          Rift leaderboards and asynchronous raids are planned but not running.
-          When they launch they will upload gameplay results: your rift score,
-          and the damage you contribute to a raid. Leaderboards are public by
-          nature, so a score and the Steam persona name attached to it would be
-          visible to other players.
-        </p>
-        <p>
-          None of that is happening today. We'll update this policy before
-          either feature goes live, so what you're reading always matches what
+          Asynchronous raids are planned but not running. When they launch they
+          will upload the damage you contribute to a raid boss. We'll update this
+          policy before that happens, so what you're reading always matches what
           the game actually does.
         </p>
 
@@ -153,14 +178,22 @@
           <a href="https://store.steampowered.com/privacy_agreement/" target="_blank" rel="noopener noreferrer">Valve's Privacy Policy</a>.
         </p>
         <p>
-          <strong>Nothing else.</strong> We don't currently embed analytics,
-          crash reporting, advertising, or attribution services in our games. If
-          we add any, we'll name the provider here and link its privacy policy
-          before we turn it on.
+          <strong>Discord Inc.</strong> Rift run records are delivered to a
+          private channel on our Discord server, which means they pass through
+          and are stored on Discord's systems. What Discord does with that is
+          covered by
+          <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">Discord's Privacy Policy</a>.
+        </p>
+        <p>
+          <strong>Nothing else.</strong> We don't embed analytics, crash
+          reporting, advertising, or attribution services in our games. If we add
+          any, we'll name the provider here and link its privacy policy before we
+          turn it on.
         </p>
 
         <h2>How we use information</h2>
         <ul>
+          <li>To run rift leaderboards and check that high scores are legitimate</li>
           <li>To respond to questions, support requests, and business inquiries</li>
           <li>To fix bugs people report to us</li>
           <li>To meet legal, tax, and accounting obligations</li>
@@ -174,7 +207,13 @@
         <h2>How long we keep it</h2>
         <p>
           Your saved games live in your Steam account for as long as you keep
-          them, under Valve's retention rules rather than ours.
+          them, under Valve's retention rules rather than ours. The same goes for
+          rift scores on a Steam leaderboard, which stay up for as long as that
+          leaderboard runs.
+        </p>
+        <p>
+          Run records in our Discord channel are kept while they're useful for
+          verifying scores, and deleted when they aren't.
         </p>
         <p>
           We keep correspondence for as long as it's useful for support and
@@ -201,10 +240,11 @@
           for the fastest route to a deletion request.
         </p>
         <p>
-          Worth knowing: most of what Broken Divide stores isn't held by us. Your
-          saved games sit in your Steam account, so deleting those is done
-          through Steam rather than by asking us. What we can delete is
-          correspondence you've sent us.
+          Worth knowing where things live. Your saved games sit in your Steam
+          account, so deleting those is done through Steam rather than by asking
+          us. What we can delete is your run records from our Discord channel and
+          any correspondence you've sent us, and we can remove your entry from a
+          rift leaderboard if you ask.
         </p>
 
         <h2>Children</h2>
